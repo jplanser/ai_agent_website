@@ -9,8 +9,17 @@ import {
   HomeIcon,
   ClockIcon,
   ShieldCheckIcon,
-  DocumentCheckIcon
+  DocumentCheckIcon,
+  CircleStackIcon,
+  CommandLineIcon,
+  CpuChipIcon,
 } from '@heroicons/react/24/outline'
+
+const FLOATING_ELEMENTS = [
+  { Icon: CircleStackIcon, x: '10%', y: '20%', duration: 20 },
+  { Icon: CommandLineIcon, x: '85%', y: '15%', duration: 15 },
+  { Icon: CpuChipIcon, x: '75%', y: '75%', duration: 25 },
+]
 
 const INDUSTRY_DATA = [
   {
@@ -84,6 +93,26 @@ const WhoWeServe = () => {
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-gray-900 to-purple-900/20" />
       </div>
+
+      {/* Floating background elements */}
+      {FLOATING_ELEMENTS.map(({ Icon, x, y, duration }, index) => (
+        <motion.div
+          key={index}
+          className="absolute opacity-[0.03] text-white"
+          style={{ left: x, top: y }}
+          animate={{
+            y: ['-20px', '20px', '-20px'],
+            rotate: [0, 10, -10, 0],
+          }}
+          transition={{
+            duration,
+            repeat: Infinity,
+            ease: 'linear',
+          }}
+        >
+          <Icon className="w-24 h-24" />
+        </motion.div>
+      ))}
 
       <div className="container relative mx-auto px-8 lg:px-16 z-10">
         {/* Section Header */}
@@ -182,8 +211,7 @@ const WhoWeServe = () => {
           ))}
         </div>
 
-        
-        {/* CTA Button - added more top margin */}
+        {/* CTA Button */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -202,7 +230,6 @@ const WhoWeServe = () => {
             </motion.button>
           </Link>
         </motion.div>
-
       </div>
     </section>
   )

@@ -113,7 +113,7 @@ const VentureStudio = () => {
         >
           <Link href="/venture-studio">
             <motion.button
-              className="relative group bg-gradient-to-r from-emerald-600 to-cyan-600 text-white px-8 py-4 text-lg rounded-full overflow-hidden"
+              className="relative group bg-gradient-to-r from-emerald-600 to-cyan-600 text-white px-6 sm:px-8 py-4 text-base sm:text-lg rounded-full overflow-hidden w-full sm:w-auto"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

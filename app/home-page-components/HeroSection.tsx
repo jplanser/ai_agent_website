@@ -1,5 +1,5 @@
 'use client'
-
+import HeroVisualization from '@/app/home-page-components/HeroVisualization'  
 import { motion } from 'framer-motion'
 
 
@@ -74,7 +74,7 @@ const HeroSection = () => {
       <div className="container relative mx-auto px-8 lg:px-16 pt-32 pb-20 flex flex-col lg:flex-row items-center justify-between z-10">
         {/* Left side - Content */}
         <motion.div 
-          className="w-full lg:w-1/2 lg:pr-12"
+          className="w-full lg:w-1/2 lg:pr-12 lg:pt-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -141,15 +141,16 @@ const HeroSection = () => {
           </motion.div>
         </motion.div>
 
+
         {/* Right side - Visual */}
         <motion.div 
-          className="w-full lg:w-1/2 mb-10 lg:mb-0"
+          className="hidden lg:block w-full lg:w-1/2 mb-10 lg:mb-0"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="max-w-[600px] mx-auto aspect-[4/3] bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center border border-gray-800">
-            <span className="text-gray-400">Visual Component Placeholder</span>
+          <div className="max-w-[600px] mx-auto aspect-[4/3] rounded-lg flex items-center justify-center">
+            <HeroVisualization />
           </div>
         </motion.div>
       </div>

@@ -45,12 +45,11 @@ const PROCESS_STEPS = [
 
 const HowItWorks = () => {
   return (
-    <section className="relative py-24 bg-black overflow-hidden">
+    <section className="relative py-24 bg-gray-950 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-blue-900/20" />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-gray-900 to-blue-900/20" />
       </div>
-
       <div className="container relative mx-auto px-8 lg:px-16 z-10">
         {/* Section Header */}
         <motion.div
@@ -115,11 +114,11 @@ const HowItWorks = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-right"
+          className="text-center md:text-right"
         >
           <Link href="/how-it-works" className="inline-block">
             <motion.button
-              className="relative group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 text-lg rounded-full overflow-hidden flex items-center gap-2"
+              className="relative group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 text-sm md:text-lg rounded-full overflow-hidden flex items-center gap-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

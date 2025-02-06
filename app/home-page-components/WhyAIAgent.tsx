@@ -36,8 +36,15 @@ const WhyAIAgent = () => {
     <section className="relative py-24 bg-black overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-900/10 via-purple-900/10 to-blue-900/10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 via-purple-900/10 to-blue-900/10" />
+        
+        {/* Decorative streaks */}
+        <div className="absolute -rotate-45 top-1/4 left-0 w-[40rem] h-1 bg-gradient-to-r from-transparent via-blue-500/20 to-transparent blur-sm" />
+        <div className="absolute rotate-45 top-1/3 right-0 w-[30rem] h-1 bg-gradient-to-r from-transparent via-blue-500/20 to-transparent blur-sm" />
+        <div className="absolute -rotate-12 bottom-1/4 left-1/4 w-[35rem] h-[2px] bg-gradient-to-r from-transparent via-blue-400/15 to-transparent blur-sm" />
       </div>
+
+      
 
       <div className="container relative mx-auto px-8 lg:px-16 z-10">
         {/* Section Header */}

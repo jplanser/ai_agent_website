@@ -132,7 +132,7 @@ const NavBar = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <span className="relative z-10">Get Started</span>
+                  <span className="relative z-10">Get a Free AI Consultation</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </motion.button>
               </Link>
@@ -242,7 +242,7 @@ const NavBar = () => {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      <span className="relative z-10">Get Started</span>
+                      <span className="relative z-10">Get a Free AI Consultation</span>
                       <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </motion.button>
                   </Link>

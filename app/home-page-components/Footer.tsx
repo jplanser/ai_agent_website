@@ -1,5 +1,5 @@
 'use client'
-
+import { FaLinkedin, FaXTwitter } from 'react-icons/fa6'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
@@ -186,7 +186,28 @@ const Footer = () => {
               © {new Date().getFullYear()} Your Company Name. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
-              {/* Add social media links here if needed */}
+              <motion.a
+                href="https://linkedin.com/company/your-company"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-blue-400 transition-colors"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FaLinkedin className="h-5 w-5" />
+                <span className="sr-only">LinkedIn</span>
+              </motion.a>
+              <motion.a
+                href="https://x.com/your-handle"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-blue-400 transition-colors"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FaXTwitter className="h-5 w-5" />
+                <span className="sr-only">X (Twitter)</span>
+              </motion.a>
             </div>
           </div>
         </motion.div>
